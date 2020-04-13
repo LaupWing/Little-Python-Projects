@@ -34,6 +34,8 @@ def paddle_a_up():
     y += 20
     paddle_a.sety(y)
 
+wn.listen()
+wn.onkeypress(paddle_a_up, 'w')
 
 
 
