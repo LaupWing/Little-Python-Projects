@@ -6,6 +6,9 @@ wn.bgcolor('green')
 wn.setup(width=800, height=600)
 wn.tracer(0)
 
+score_a = 0
+score_b = 0
+
 paddle_a = turtle.Turtle()
 paddle_a.speed(0)
 paddle_a.shape('square')
@@ -30,6 +33,14 @@ ball.penup()
 ball.goto(0,0)
 ball.dx = .12
 ball.dy = .12
+
+pen = turtle.Turtle()
+pen.speed(0)
+pen.color('white')
+pen.penup()
+pen.hideturtle()
+pen.goto(0, 260)
+pen.write('Player A:0   Player B:0', align='center', font=('Courier', 24, 'normal'))
 
 def paddle_a_up():
     y = paddle_a.ycor()
